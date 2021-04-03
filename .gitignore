@@ -1,0 +1,6 @@
+/venv/
+/test.py
+/.idea
+
+*.pyc
+*.pyi
