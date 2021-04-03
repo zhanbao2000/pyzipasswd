@@ -276,9 +276,10 @@ def extract_dict(archive: Archive, new_passwd: Optional[str] = None) -> Union[st
 
 
 def main():
-    handle_dir(r"F:/path/to/dir")
-    handle_file(r"F:/path/to/file/test.zip")
-    add_passwd('new_password')
+    handle_dir(r"F:/path/to/dir")  # 批量测试文件夹内的压缩文件
+    handle_file(r"F:/path/to/file/test.zip")  # 测试单个压缩文件
+    add_passwd('new_password')  # 为内置字典添加新的密码
+    add_dict(r'F:/path/to/new/dict.txt')  # 为内置字典一次性添加多个密码（一行一个）
     try:
         shutil.rmtree(temp_dir)
     except FileNotFoundError:
